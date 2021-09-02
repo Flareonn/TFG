@@ -78,7 +78,6 @@ function popupCloser() {
   document.querySelector(".popup").remove();
 }
 
-const main = body.querySelector(".main");
 const headerBurger = body.querySelector("#headerBurger");
 const headerNav = body.querySelector("#headerNav");
 
@@ -86,7 +85,6 @@ headerBurger.addEventListener("click", () => {
   headerBurger.classList.toggle("active");
   headerNav.classList.toggle("active");
   body.classList.toggle("lock");
-  main.classList.toggle("active");
 });
 
 Array

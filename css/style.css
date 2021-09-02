@@ -325,11 +325,6 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  background-color: #423fd9;
-}
-
-.main.active {
-  background-image: none;
 }
 
 .main-wrapper {
@@ -1087,7 +1082,7 @@ h6 {
 }
 
 .popup-form__input {
-  border: 2px solid rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   padding: 28px;
   margin-bottom: 25px;
@@ -1640,9 +1635,9 @@ h6 {
     display: -ms-flexbox;
     display: flex;
     position: fixed;
-    top: -100%;
-    padding: 59px 16px;
-    left: 0;
+    top: 0;
+    padding: 134px 16px 0px;
+    left: -100%;
     width: 100%;
     height: 100%;
     background-color: #423FD9;
@@ -1653,10 +1648,13 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
   }
 
   .header-nav.active {
-    top: 75px;
+    left: 0;
     -webkit-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
@@ -2204,7 +2202,10 @@ h6 {
   }
 
   .popup-form__submit {
-    padding: 25px 0 !important;
+    padding: 10px 0 !important;
     width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
