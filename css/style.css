@@ -1577,7 +1577,7 @@ h6 {
 @media (max-width: 768px) {
   .container {
     max-width: none;
-    padding: 0px 10px;
+    padding: 0px 16px;
   }
 
   .header {
@@ -1902,7 +1902,8 @@ h6 {
   .action {
     background-image: url("../img/action-bgc-m.svg");
     padding: 30px 0px 55px;
-    background-size: 100% 187px;
+    background-size: cover;
+    background-position: bottom;
   }
 
   .action__title {
