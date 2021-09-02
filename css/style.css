@@ -1799,6 +1799,12 @@ h6 {
     line-height: 15px;
   }
 
+  .main__title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+
   .main__subtitle {
     font-size: 14px;
     line-height: 17px;
