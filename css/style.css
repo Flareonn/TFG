@@ -212,6 +212,7 @@ h6 {
 
 .header-logo {
   color: #fff;
+  z-index: 9999;
 }
 
 .header__title {
@@ -258,6 +259,7 @@ h6 {
   position: relative;
   width: 30px;
   height: 20px;
+  z-index: 9999;
 }
 
 .header-burger::after,
@@ -303,8 +305,10 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 17px;
+  font-weight: 500;
 }
 
 .header-nav a:first-child {
@@ -747,7 +751,7 @@ h6 {
   border: none;
   text-transform: uppercase;
   background: #F2C94C;
-  padding: 25px 86px;
+  padding: 25px 86px !important;
   color: #333333;
   margin: 0 auto;
 }
@@ -869,12 +873,13 @@ h6 {
 .faq-question__content {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.5s ease-out;
-  -o-transition: max-height 0.5s ease-out;
-  transition: max-height 0.5s ease-out;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
   text-align: left;
   font-size: 24px;
   line-height: 29px;
+  padding-left: 76px;
 }
 
 .faq-question img {
@@ -1202,17 +1207,6 @@ h6 {
     margin-right: 40px;
   }
 
-  .main-wrapper {
-    margin-top: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: calc( 100% - 240px);
-  }
-
   .main__title {
     font-size: 50px;
     line-height: 50px;
@@ -1340,6 +1334,7 @@ h6 {
   .faq-question__content {
     font-size: 20px;
     line-height: 24px;
+    padding-left: 65px;
   }
 
   .footer-logo__title {
@@ -1568,7 +1563,7 @@ h6 {
   }
 }
 
-@media (max-width: 992px) and (max-width: 576px) {
+@media (max-width: 992px) and (max-width: 768px) {
   .main-inner:first-child {
     margin-bottom: 0;
   }
@@ -1577,7 +1572,7 @@ h6 {
 @media (max-width: 768px) {
   .container {
     max-width: none;
-    padding: 0px 16px;
+    padding: 0px 40px;
   }
 
   .header {
@@ -1586,11 +1581,17 @@ h6 {
     top: 0;
     left: 0;
     z-index: 50;
-    padding: 50px 16px;
+    padding: 50px 0px;
+    margin-bottom: 0px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+
+  .header__title {
+    font-size: 35px;
+    line-height: 45px;
   }
 
   .header-actions {
@@ -1631,60 +1632,6 @@ h6 {
     top: 9px;
   }
 
-  .main-wrapper {
-    width: auto;
-  }
-
-  .main__title {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  .cases-wrapper__block:first-child {
-    margin-bottom: 50px;
-  }
-
-  .about-wrapper__block,
-  .about-wrapper picture {
-    width: 100%;
-  }
-
-  .footer-logo__block:first-child {
-    margin-bottom: 30px;
-  }
-
-  .popup-wrapper {
-    padding: 100px 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .features__title,
-  .cases__title,
-  .profit__title,
-  .target__title,
-  .prospect__title,
-  .about__title,
-  .faq__title {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .header {
-    padding: 50px 0px 0px;
-    margin-bottom: 30px;
-  }
-
-  .header__title {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .header__subtitle {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
   .header-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1713,10 +1660,24 @@ h6 {
     z-index: 999;
   }
 
+  .main-wrapper {
+    width: auto;
+  }
+
+  .main__title {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 25px;
+  }
+
   .main__subtitle {
-    font-size: 14px;
+    font-size: 17px;
     line-height: 17px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .main__subtitle br {
+    display: none;
   }
 
   .main__image {
@@ -1724,8 +1685,127 @@ h6 {
   }
 
   .main__button {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    padding: 8px 12px !important;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .features-wrapper__block {
+    width: 100%;
+  }
+
+  .cases .container {
+    padding-top: 27px;
+  }
+
+  .cases__title {
+    margin-bottom: 50px;
+  }
+
+  .cases-wrapper__image_mobile {
+    display: block;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .cases-wrapper__image {
+    display: none;
+  }
+
+  .cases-wrapper__title {
+    font-size: 18px;
+    line-height: 20px;
+    min-height: 30px;
+    margin-bottom: 0;
+  }
+
+  .cases-wrapper__subtitle {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .cases-wrapper__block {
+    width: calc(50% - 10px);
+  }
+
+  .cases-wrapper__block picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cases-wrapper__block:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  .cases-advice::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  .cases-advice span {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .about-wrapper__block,
+  .about-wrapper picture {
+    width: 100%;
+  }
+
+  .footer-logo__block:first-child {
+    margin-bottom: 30px;
+  }
+
+  .popup-wrapper {
+    padding: 100px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .features__title,
+  .cases__title,
+  .profit__title,
+  .target__title,
+  .prospect__title,
+  .about__title,
+  .faq__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .container {
+    padding: 0px 16px;
+  }
+
+  .header {
+    padding: 50px 0px 0px;
+    margin-bottom: 30px;
+  }
+
+  .header__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .header__subtitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .main__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 30px;
+  }
+
+  .main__button {
     padding: 10px 20px !important;
   }
 
@@ -1735,10 +1815,6 @@ h6 {
 
   .features__title {
     margin: 10px 0px 65px;
-  }
-
-  .features-wrapper__block {
-    width: 100%;
   }
 
   .features-block__title {
@@ -1758,10 +1834,6 @@ h6 {
     height: 5px;
   }
 
-  .cases .container {
-    padding-top: 27px;
-  }
-
   .cases {
     padding-bottom: 130px;
     background-size: contain;
@@ -1776,19 +1848,6 @@ h6 {
     margin: 10px 0px 55px;
   }
 
-  .cases-wrapper__image_mobile {
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  .cases-wrapper__block {
-    width: 100%;
-  }
-
-  .cases-wrapper__image {
-    display: none;
-  }
-
   .cases-wrapper__title {
     font-size: 18px;
     line-height: 18px;
@@ -1798,6 +1857,14 @@ h6 {
   .cases-wrapper__subtitle {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .cases-wrapper__block {
+    width: 100%;
+  }
+
+  .cases-wrapper__block:first-child {
+    margin-bottom: 50px;
   }
 
   .cases-advice {
@@ -1913,7 +1980,9 @@ h6 {
   }
 
   .action__button {
-    padding: 10px 91.5px;
+    padding: 10px 0px !important;
+    width: 65%;
+    text-align: center;
     font-size: 14px;
     line-height: 17px;
   }
@@ -1973,6 +2042,7 @@ h6 {
   .faq-question__content {
     font-size: 14px;
     line-height: 17px;
+    padding-left: 26.5px;
   }
 
   .faq-question.active .faq-question__content {
@@ -2034,7 +2104,7 @@ h6 {
   }
 
   .footer-action__button {
-    padding: 10px 88px !important;
+    padding: 10px 86px !important;
     margin-bottom: 25px;
     font-weight: 500;
     font-size: 14px;

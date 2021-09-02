@@ -95,7 +95,6 @@ Array
     i.addEventListener("click", function() {
       this.classList.toggle("active");
       let panel = this.querySelector(".faq-question__content");
-      console.log(panel, this);
       if(panel.style.maxHeight) panel.style.maxHeight = null;
       else panel.style.maxHeight = panel.scrollHeight + "px";
     });
