@@ -2119,7 +2119,8 @@ h6 {
   }
 
   .footer-action__button {
-    padding: 10px 86px !important;
+    padding: 10px 0px !important;
+    width: 100%;
     margin-bottom: 25px;
     font-weight: 500;
     font-size: 14px;
