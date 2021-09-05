@@ -362,7 +362,7 @@ h6 {
 }
 
 .main__button {
-  padding: 25px !important;
+  padding: 23px !important;
 }
 
 .features {
@@ -493,6 +493,7 @@ h6 {
   width: 40%;
   -ms-flex-item-align: center;
       align-self: center;
+  margin: 0px 40px;
 }
 
 .cases-wrapper__title {
@@ -981,7 +982,7 @@ h6 {
   color: #000;
   text-transform: uppercase;
   margin-bottom: 33px;
-  padding: 25px 80.5px !important;
+  padding: 23px 80.5px !important;
 }
 
 .footer-action__copy {
@@ -1488,8 +1489,12 @@ h6 {
   }
 
   .cases-wrapper__block {
-    width: 50%;
+    width: 47.5%;
     margin-bottom: 25px;
+  }
+
+  .cases-wrapper__block:nth-child(odd) {
+    margin-right: 5%;
   }
 
   .cases-wrapper:first-child,
@@ -1616,6 +1621,14 @@ h6 {
 @media (max-width: 992px) and (max-width: 768px) {
   .main-inner:first-child {
     margin-bottom: 0;
+  }
+
+  .cases-wrapper__block {
+    width: 50%;
+  }
+
+  .cases-wrapper__block:nth-child(odd) {
+    margin-right: 0;
   }
 }
 
@@ -1807,6 +1820,11 @@ h6 {
   .cases-advice span {
     font-size: 17px;
     line-height: 25px;
+  }
+
+  .target-wrapper__list-item:first-child {
+    margin-right: 5%;
+    width: 45%;
   }
 
   .about__title {
